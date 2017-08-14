@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <br><br>
+        <h1 class="header center orange-text">Amazing Universe</h1>
+        <div class="row center">
+            <h5 class="header col s12 light">@ViewData["description"]</h5>
+        </div>
+        <div class="row">
+            <ul class="collection with-header">
+                <li class="collection-header"><h4>Galaxies</h4></li>
+                @foreach (string s in ViewBag.Spacecrafts)
+                {
+                    <li class="collection-item"><a href="#!">@s</a> </li>
+                }
+
+            </ul>
+            <a href="http://camposha.info" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+        </div>
+        <br><br>
+    </div>
+</div>
